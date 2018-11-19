@@ -6,16 +6,16 @@ class Board {
 
 	std::vector<std::vector<char> > board;
 public:
-	int size;
-	Board(int size);
+	size_t size;
+	explicit Board(size_t size);
 	Board();
 
 	void make_play(int x, int y, char symbol);
-	void print();
-	bool check_for_winner(int limit);
+	const void print();
+	const bool check_for_winner(int limit);
 	bool is_valid_move(int x, int y);
 private:
-	bool check_for_winner_row(bool rows, int limit);
+	const bool check_for_winner_row(bool rows, int limit);
 };
 
 class Game {
